@@ -12,7 +12,9 @@ def train():
 
     while True:
         state_old = agent.get_state(game)
+
         final_move = agent.get_action(state_old)
+
         reward, done, score = game.play_step(final_move)
         state_new = agent.get_state(game)
 
@@ -38,4 +40,3 @@ def train():
 
 if __name__ == '__main__':
     train()
-  
